@@ -1,9 +1,10 @@
-//
-//  ViewController.swift
-//  calculator
-//
-//  Created by Carlos Cifuentes on 2021-09-26.
-//
+/*
+Autor: Carlos Cifuentes.
+StudentID: 301140805
+Date: 09/26/2021
+Version: 1
+Description: Project to create a calculator, this initial milestone includes the definition of the UI, creation of elements and application of constraints.
+ */
 
 import UIKit
 
