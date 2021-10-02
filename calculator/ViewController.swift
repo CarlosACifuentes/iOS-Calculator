@@ -9,12 +9,14 @@ Description: Project to create a calculator, this initial milestone includes the
 import UIKit
 
 class ViewController: UIViewController {
-    // Variables
+    // declaration of Variables
     var firstNumber: Double = 0
     var secondNumber: Double = 0
     var result: Double = 0
+    var resultInt: Int = 0
     var activeNumber:String = ""
     var operationSelected: Int = 0
+
    
     
     // Outlets
@@ -30,47 +32,65 @@ class ViewController: UIViewController {
     
     @IBAction func OnSpecialButton_Pressed(_ sender: UIButton)
     {
+        // Backspace button removing last character until there is only one left.
         if sender.tag == 1 && activeNumber.count > 1 // back
         {
             activeNumber.removeLast()
-        } else if sender.tag == 1 && activeNumber.count == 1 {
-            
+        }
+        // Backspace button when there is only one character, make it cero instead of removing it.
+        else if sender.tag == 1 && activeNumber.count == 1
+        {
             activeNumber = "0"
         }
-        
-        if sender.tag == 2 && !activeNumber.contains("-") && activeNumber != "0" {
+        // Plus/minus button actions, validates whether it is negative already and different from cero to add the minus.
+        if sender.tag == 2 && !activeNumber.contains("-") && activeNumber != "0"
+        {
             activeNumber.insert("-", at: activeNumber.startIndex)
-        } else if sender.tag == 2 && activeNumber != "0" {
+        }
+        // if it's negative, removes the minus.
+        else if sender.tag == 2 && activeNumber != "0"
+        {
             activeNumber.remove(at: activeNumber.startIndex)
         }
-        
-        if sender.tag == 3{
+        // clear all button, makes active number cero.
+        if sender.tag == 3
+        {
             activeNumber = "0"
+            resultLabel.text = activeNumber
+            //operationLable.text = ""
         }
-        
-        resultLabel.text = activeNumber
-        
+        if sender.tag == 4
+        {
+            firstNumber = Double(activeNumber)!
+            firstNumber = firstNumber / 100
+            activeNumber = "\(firstNumber)"
+            
+        }
+        //assigns the final active number to the operator label.
+        operationLable.text = activeNumber
     }
     
     @IBAction func OnNumberButton_Pressed(_ sender: UIButton)
     {
+        // captures string input from buttons.
         let button_text = sender.titleLabel?.text
         
         switch button_text
         {
+            //validates it only adds one, and that there are at least 2 character remaining so that the dot is not the last character.
         case ".":
             if !activeNumber.contains(".") && activeNumber.count < 9
             {
                 activeNumber.append(button_text!)
+                operationLable.text?.append(button_text!)
                 
             }
         case "0":
             if activeNumber != "0" && activeNumber.count < 10
             {
                 activeNumber.append(button_text!)
-                
+                operationLable.text?.append(button_text!)
             }
-            
             
         default:
             if activeNumber.count < 10
@@ -78,65 +98,89 @@ class ViewController: UIViewController {
                 if activeNumber == "0"
                 {
                     activeNumber = button_text!
+                    //operationLable.text = button_text!
                 } else
                     {
                         activeNumber.append(button_text!)
+                        //operationLable.text?.append(button_text!)
+                        
                     }
-            }
-            
-            
+            }; if operationLable.text == "0"
+                {
+                    operationLable.text = button_text
+                }
+                else
+                {
+                    operationLable.text?.append(button_text!)
+                }
         }
-        resultLabel.text = activeNumber
+        //resultLabel.text = activeNumber
+        
+        
     }
     
     @IBAction func OnOperationButton_Pressed(_ sender: UIButton)
     {
-       
+        firstNumber = Double(activeNumber)!
+        activeNumber = "0"
         
-        if sender.tag == 5{ // suma
-            
-            firstNumber = Double(activeNumber)!
-            activeNumber = "0"
+        if sender.tag == 5{
             operationSelected = 1
+            operationLable.text?.append(" + ")
         }
         if sender.tag == 7{
-            firstNumber = Double(activeNumber)!
-            activeNumber = "0"
             operationSelected = 2
+            operationLable.text?.append(" - ")
         }
         if sender.tag == 8{
-            firstNumber = Double(activeNumber)!
-            activeNumber = "0"
             operationSelected = 3
+            operationLable.text?.append(" * ")
         }
         if sender.tag == 9{
-            firstNumber = Double(activeNumber)!
-            activeNumber = "0"
-           // resultLabel.text = ""
             operationSelected = 4
+            operationLable.text?.append(" / ")
         }
         
-        
-        if sender.tag == 6 && operationSelected == 1{
-            secondNumber = Double(activeNumber)!
-            result = firstNumber + secondNumber
-            resultLabel.text = "\(result)"
-            //firstNumber = result
-        }else if sender.tag == 6 && operationSelected == 2{
-            secondNumber = Double(activeNumber)!
-            result = firstNumber - secondNumber
-            resultLabel.text = "\(result)"
-        }else if sender.tag == 6 && operationSelected == 3{
-            secondNumber = Double(activeNumber)!
-            result = firstNumber * secondNumber
-            resultLabel.text = "\(result)"
-        }else if sender.tag == 6 && operationSelected == 4{
-            secondNumber = Double(activeNumber)!
-            result = firstNumber / secondNumber
-            resultLabel.text = "\(result)"
-        }
-        
+ 
     }
     
+    @IBAction func OnResultButton_Pressed(_ sender: UIButton) {
+        
+        secondNumber = Double(activeNumber)!
+        
+        if operationSelected == 1{
+            result = firstNumber + secondNumber
+        }
+        else if operationSelected == 2
+        {
+            result = firstNumber - secondNumber
+        }
+        else if operationSelected == 3
+        {
+            result = firstNumber * secondNumber
+        }
+        else if operationSelected == 4
+        {
+            result = firstNumber / secondNumber
+        }
+        // validating if contains decimals to remove the cero when is not necessary.
+        
+        if (result.truncatingRemainder(dividingBy: 1) == 0)
+        {
+            resultInt = Int(result)
+            resultLabel.text = "\(resultInt)"
+            firstNumber = Double(resultInt)
+            
+        }
+        else
+        {
+            resultLabel.text = "\(result)"
+            firstNumber = result
+        }
+        
+        secondNumber = 0
+        activeNumber = "\(result)"
+        
+    }
 }
 
