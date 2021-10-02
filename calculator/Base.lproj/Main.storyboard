@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator_part2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,14 +29,17 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.44313728810000003" green="0.74117654560000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTC-58-Phk"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-AH-4YJ">
-                                <rect key="frame" x="24" y="156" width="342" height="104"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-AH-4YJ">
+                                <rect key="frame" x="24" y="156" width="342" height="93"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="71"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80 + 80 - 20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB9-6B-ZFi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 - 8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB9-6B-ZFi">
                                 <rect key="frame" x="34" y="124" width="322" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="CMR-1o-5At"/>
@@ -57,6 +60,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZs-hP-Woy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TV-oH-QL3">
                                 <rect key="frame" x="26" y="481" width="70" height="74"/>
@@ -70,6 +76,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gup-6T-Ljq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4u-43-riG">
                                 <rect key="frame" x="26" y="571" width="70" height="74"/>
@@ -83,6 +92,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxe-RI-uLb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyj-eC-Q0v">
                                 <rect key="frame" x="296" y="481" width="70" height="74"/>
@@ -97,6 +109,9 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                     <color key="baseBackgroundColor" red="0.44313728810000003" green="0.74117654560000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfu-Cv-Vbd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-6J-upQ">
                                 <rect key="frame" x="296" y="391" width="70" height="74"/>
@@ -111,6 +126,9 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.44313728810000003" green="0.74117654560000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivS-qV-ee9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-Qe-POr">
                                 <rect key="frame" x="296" y="301" width="70" height="74"/>
@@ -128,6 +146,9 @@
                                     </preferredSymbolConfiguration>
                                     <color key="baseBackgroundColor" red="0.44313728810000003" green="0.74117654560000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5g-nb-j3H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-vr-fLX">
                                 <rect key="frame" x="116" y="391" width="70" height="74"/>
@@ -141,6 +162,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eao-70-4Tl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozJ-vR-FKD">
                                 <rect key="frame" x="116" y="481" width="70" height="74"/>
@@ -154,6 +178,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Lc-bg-oIf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-z2-GBV">
                                 <rect key="frame" x="116" y="571" width="70" height="74"/>
@@ -167,6 +194,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ubn-fd-He8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-Be-A9u">
                                 <rect key="frame" x="206" y="481" width="70" height="74"/>
@@ -180,6 +210,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mW9-8V-mSm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMu-19-XKk">
                                 <rect key="frame" x="206" y="571" width="70" height="74"/>
@@ -193,8 +226,11 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Stu-BG-SvA"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvQ-WB-aXj">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvQ-WB-aXj">
                                 <rect key="frame" x="26" y="301" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="4L3-bp-BKu"/>
@@ -206,6 +242,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eR8-cg-VlX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slQ-ej-Lp7">
                                 <rect key="frame" x="116" y="661" width="70" height="74"/>
@@ -221,6 +260,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USd-vg-URV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhT-eo-Npv">
                                 <rect key="frame" x="206" y="661" width="70" height="74"/>
@@ -234,8 +276,11 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eY3-Tt-Dfr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrx-k1-pDU">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrx-k1-pDU">
                                 <rect key="frame" x="206" y="301" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="MqJ-fL-12L"/>
@@ -250,8 +295,11 @@
                                     </preferredSymbolConfiguration>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NR7-9a-6Z4"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWp-v6-vpC">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWp-v6-vpC">
                                 <rect key="frame" x="116" y="301" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="UZi-0l-ySz"/>
@@ -266,6 +314,9 @@
                                     </preferredSymbolConfiguration>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wv6-FU-VlP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-Ck-Vc3">
                                 <rect key="frame" x="296" y="571" width="70" height="74"/>
@@ -280,8 +331,11 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.44313728810000003" green="0.74117654560000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uAa-zU-3UD"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSN-8f-KAI">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSN-8f-KAI">
                                 <rect key="frame" x="26" y="661" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="L08-W2-Gbu"/>
@@ -296,6 +350,9 @@
                                     </preferredSymbolConfiguration>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pne-G8-sE1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFw-Sm-Qwl">
                                 <rect key="frame" x="206" y="391" width="70" height="74"/>
@@ -309,6 +366,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVH-lN-lyP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -362,6 +422,10 @@
                             <constraint firstItem="SEM-z2-GBV" firstAttribute="top" secondItem="ozJ-vR-FKD" secondAttribute="bottom" constant="16" id="zUh-lU-wU3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="operationLable" destination="eB9-6B-ZFi" id="ejN-3f-8hb"/>
+                        <outlet property="resultLabel" destination="Zlr-AH-4YJ" id="VN7-Wd-3a8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
