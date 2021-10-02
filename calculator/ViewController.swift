@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     // Variables
     var firstNumber: Double = 0
     var secondNumber: Double = 0
+    var result: Double = 0
     var activeNumber:String = ""
+    var operationSelected: Int = 0
    
     
     // Outlets
@@ -89,6 +91,50 @@ class ViewController: UIViewController {
     
     @IBAction func OnOperationButton_Pressed(_ sender: UIButton)
     {
+       
+        
+        if sender.tag == 5{ // suma
+            
+            firstNumber = Double(activeNumber)!
+            activeNumber = "0"
+            operationSelected = 1
+        }
+        if sender.tag == 7{
+            firstNumber = Double(activeNumber)!
+            activeNumber = "0"
+            operationSelected = 2
+        }
+        if sender.tag == 8{
+            firstNumber = Double(activeNumber)!
+            activeNumber = "0"
+            operationSelected = 3
+        }
+        if sender.tag == 9{
+            firstNumber = Double(activeNumber)!
+            activeNumber = "0"
+           // resultLabel.text = ""
+            operationSelected = 4
+        }
+        
+        
+        if sender.tag == 6 && operationSelected == 1{
+            secondNumber = Double(activeNumber)!
+            result = firstNumber + secondNumber
+            resultLabel.text = "\(result)"
+            //firstNumber = result
+        }else if sender.tag == 6 && operationSelected == 2{
+            secondNumber = Double(activeNumber)!
+            result = firstNumber - secondNumber
+            resultLabel.text = "\(result)"
+        }else if sender.tag == 6 && operationSelected == 3{
+            secondNumber = Double(activeNumber)!
+            result = firstNumber * secondNumber
+            resultLabel.text = "\(result)"
+        }else if sender.tag == 6 && operationSelected == 4{
+            secondNumber = Double(activeNumber)!
+            result = firstNumber / secondNumber
+            resultLabel.text = "\(result)"
+        }
         
     }
     

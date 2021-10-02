@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFW-qQ-4GJ">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFW-qQ-4GJ">
                                 <rect key="frame" x="296" y="661" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Euz-Nd-EHZ"/>
@@ -96,7 +96,7 @@
                                     <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxe-RI-uLb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyj-eC-Q0v">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyj-eC-Q0v">
                                 <rect key="frame" x="296" y="481" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="4Fc-Nv-Lxs"/>
@@ -113,7 +113,7 @@
                                     <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfu-Cv-Vbd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-6J-upQ">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-6J-upQ">
                                 <rect key="frame" x="296" y="391" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="K37-5f-J5Q"/>
@@ -130,7 +130,7 @@
                                     <action selector="OnOperationButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivS-qV-ee9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-Qe-POr">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-Qe-POr">
                                 <rect key="frame" x="296" y="301" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="8vH-Uh-Cf7"/>
@@ -318,7 +318,7 @@
                                     <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wv6-FU-VlP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-Ck-Vc3">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-Ck-Vc3">
                                 <rect key="frame" x="296" y="571" width="70" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="5KS-Cj-rbC"/>
