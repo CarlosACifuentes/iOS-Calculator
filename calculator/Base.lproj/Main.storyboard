@@ -44,7 +44,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="CMR-1o-5At"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" red="0.44313728810000003" green="0.74117654560000001" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>

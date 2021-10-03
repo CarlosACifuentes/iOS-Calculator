@@ -1,9 +1,9 @@
 /*
 Autor: Carlos Cifuentes.
 StudentID: 301140805
-Date: 09/26/2021
-Version: 1
-Description: Project to create a calculator, this initial milestone includes the definition of the UI, creation of elements and application of constraints.
+Date: 10/01/2021
+Version: 2
+Description: Project to create a calculator, the second milestone includes all funcionality.
  */
 
 import UIKit
@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     var resultInt: Int = 0
     var activeNumber:String = ""
     var operationSelected: Int = 0
-
-   
     
     // Outlets
     @IBOutlet weak var resultLabel: UILabel!
@@ -52,13 +50,12 @@ class ViewController: UIViewController {
         {
             activeNumber.remove(at: activeNumber.startIndex)
         }
-        // clear all button, makes active number cero.
+        // "clear all" button, makes active number cero.
         if sender.tag == 3
         {
             activeNumber = "0"
-            resultLabel.text = activeNumber
-            //operationLable.text = ""
         }
+        // Percentage button, divides the number by 100.
         if sender.tag == 4
         {
             firstNumber = Double(activeNumber)!
@@ -66,13 +63,14 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
             
         }
-        //assigns the final active number to the operator label.
+        //assigns the final active number to the operator and result label. It was weird to have the number frozen on the result label.
         operationLable.text = activeNumber
+        resultLabel.text = activeNumber
     }
     
     @IBAction func OnNumberButton_Pressed(_ sender: UIButton)
     {
-        // captures string input from buttons.
+        // captures string input from buttons - it limits the input characters to 10 to avoid too many numbers.
         let button_text = sender.titleLabel?.text
         
         switch button_text
@@ -85,6 +83,7 @@ class ViewController: UIViewController {
                 operationLable.text?.append(button_text!)
                 
             }
+            // add cero only if the value is 0 and if there is space still in the input
         case "0":
             if activeNumber != "0" && activeNumber.count < 10
             {
@@ -95,17 +94,17 @@ class ViewController: UIViewController {
         default:
             if activeNumber.count < 10
             {
+                //replacing 0 by the number to avoid appending a number to a cero.
                 if activeNumber == "0"
                 {
                     activeNumber = button_text!
-                    //operationLable.text = button_text!
                 } else
                     {
                         activeNumber.append(button_text!)
-                        //operationLable.text?.append(button_text!)
                         
                     }
-            }; if operationLable.text == "0"
+            };  //additional conditional for the operators lable to avoid appending a number to a cero.
+                if operationLable.text == "0"
                 {
                     operationLable.text = button_text
                 }
@@ -114,28 +113,30 @@ class ViewController: UIViewController {
                     operationLable.text?.append(button_text!)
                 }
         }
-        //resultLabel.text = activeNumber
-        
         
     }
     
     @IBAction func OnOperationButton_Pressed(_ sender: UIButton)
     {
+        //assigning the active value to the double variable for the first number
         firstNumber = Double(activeNumber)!
         activeNumber = "0"
-        
+        // tag 5 and operation 1 = add action—I created a int variable to identify to action selected.
         if sender.tag == 5{
             operationSelected = 1
             operationLable.text?.append(" + ")
         }
+        // tag 7 and operation 2 = subtract action
         if sender.tag == 7{
             operationSelected = 2
             operationLable.text?.append(" - ")
         }
+        // tag 8 and operation 3 = multiply action
         if sender.tag == 8{
             operationSelected = 3
             operationLable.text?.append(" * ")
         }
+        // tag 9 and operation 4 = divide action
         if sender.tag == 9{
             operationSelected = 4
             operationLable.text?.append(" / ")
@@ -145,9 +146,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func OnResultButton_Pressed(_ sender: UIButton) {
-        
+        // Created an independent function for the equal button, to calculate results.
+        //first assigns active number to the double second variable (the first one is assigned when the user selects an operator)
         secondNumber = Double(activeNumber)!
         
+        // validates operation variable and make operations between double variables
         if operationSelected == 1{
             result = firstNumber + secondNumber
         }
@@ -163,8 +166,8 @@ class ViewController: UIViewController {
         {
             result = firstNumber / secondNumber
         }
-        // validating if contains decimals to remove the cero when is not necessary.
-        
+        // validating if contains decimals to remove the cero when is not necessary. When dividing by 1 is equal to cero, changing to a int, otherwise keep double.
+
         if (result.truncatingRemainder(dividingBy: 1) == 0)
         {
             resultInt = Int(result)
@@ -177,7 +180,7 @@ class ViewController: UIViewController {
             resultLabel.text = "\(result)"
             firstNumber = result
         }
-        
+        //restarting variables to allow further calculations.
         secondNumber = 0
         activeNumber = "\(result)"
         
