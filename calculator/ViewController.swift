@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     // Outlets
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var operationLable: UILabel!
+    @IBOutlet weak var operationalLabel_Landscape: UILabel!
+    @IBOutlet weak var resultLabel_Landscape: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +67,9 @@ class ViewController: UIViewController {
         }
         //assigns the final active number to the operator and result label. It was weird to have the number frozen on the result label.
         operationLable.text = activeNumber
+        operationalLabel_Landscape.text = activeNumber
         resultLabel.text = activeNumber
+        resultLabel_Landscape.text = resultLabel.text
     }
     
     @IBAction func OnNumberButton_Pressed(_ sender: UIButton)
@@ -81,6 +85,7 @@ class ViewController: UIViewController {
             {
                 activeNumber.append(button_text!)
                 operationLable.text?.append(button_text!)
+                operationalLabel_Landscape.text?.append(button_text!)
                 
             }
             // add cero only if the value is 0 and if there is space still in the input
@@ -89,6 +94,7 @@ class ViewController: UIViewController {
             {
                 activeNumber.append(button_text!)
                 operationLable.text?.append(button_text!)
+                operationalLabel_Landscape.text?.append(button_text!)
             }
             
         default:
@@ -104,13 +110,15 @@ class ViewController: UIViewController {
                         
                     }
             };  //additional conditional for the operators lable to avoid appending a number to a cero.
-                if operationLable.text == "0"
+            if operationLable.text == "0" || operationalLabel_Landscape.text == "0"
                 {
                     operationLable.text = button_text
+                    operationalLabel_Landscape.text = button_text
                 }
                 else
                 {
                     operationLable.text?.append(button_text!)
+                    operationalLabel_Landscape.text?.append(button_text!)
                 }
         }
         
@@ -125,21 +133,25 @@ class ViewController: UIViewController {
         if sender.tag == 5{
             operationSelected = 1
             operationLable.text?.append(" + ")
+            operationalLabel_Landscape.text?.append(" + ")
         }
         // tag 7 and operation 2 = subtract action
         if sender.tag == 7{
             operationSelected = 2
             operationLable.text?.append(" - ")
+            operationalLabel_Landscape.text?.append(" - ")
         }
         // tag 8 and operation 3 = multiply action
         if sender.tag == 8{
             operationSelected = 3
             operationLable.text?.append(" * ")
+            operationalLabel_Landscape.text?.append(" * ")
         }
         // tag 9 and operation 4 = divide action
         if sender.tag == 9{
             operationSelected = 4
             operationLable.text?.append(" / ")
+            operationalLabel_Landscape.text?.append(" / ")
         }
         
  
@@ -172,12 +184,14 @@ class ViewController: UIViewController {
         {
             resultInt = Int(result)
             resultLabel.text = "\(resultInt)"
+            resultLabel_Landscape.text = resultLabel.text
             firstNumber = Double(resultInt)
             
         }
         else
         {
             resultLabel.text = "\(result)"
+            resultLabel_Landscape.text = resultLabel.text
             firstNumber = result
         }
         //restarting variables to allow further calculations.
