@@ -1,9 +1,9 @@
 /*
 Autor: Carlos Cifuentes.
 StudentID: 301140805
-Date: 10/01/2021
-Version: 2
-Description: Project to create a calculator, the second milestone includes all funcionality.
+Date: 10/23/2021
+Version: 3
+Description: Project to create a calculator, the third milestone includes landscape mode support and additional buttons for advanced calculations
  */
 
 import UIKit
@@ -68,6 +68,7 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
             
         }
+        // Converts to double and multiply the number by itself.
         if sender.tag == 10 && activeNumber != ""
         {
             firstNumber = Double(activeNumber)!
@@ -75,13 +76,13 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
             
         }
-        
+        // assignes PI number to activeNumber.
         if sender.tag == 11
         {
             activeNumber = "\(PI)"
 
         }
-        
+        // Converts from radiants to degreens and the calculates the tan.
         if sender.tag == 12 && activeNumber != ""
         {
             firstNumber = Double(activeNumber)!
@@ -89,6 +90,7 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
 
         }
+        // Converts from radiants to degreens and the calculates the cos.
         if sender.tag == 13 && activeNumber != ""
         {
             firstNumber = Double(activeNumber)!
@@ -96,6 +98,7 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
 
         }
+        // Converts from radiants to degreens and the calculates the sin.
         if sender.tag == 14 && activeNumber != ""
         {
             firstNumber = Double(activeNumber)!
@@ -103,7 +106,8 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
 
         }
-        //https://learnappmaking.com/random-numbers-swift/
+        
+        //based on examples from-> https://learnappmaking.com/random-numbers-swift/
         
         if sender.tag == 15 && activeNumber != ""
         {
@@ -112,23 +116,24 @@ class ViewController: UIViewController {
 
         }
         
-        
+        // Converts to double and calculates root.
         if sender.tag == 16
         {
             /*
-            root = Double(activeNumber)! / 2
+            firstNumber = Double(activeNumber)!
+            root = firstNumber / 2
             while (root != 0)
             {
-                result = root
-                root = ((Double(activeNumber)! / result) + result )/2
+                root = ((firstNumber / root) + root )/2
             }
-            
-            activeNumber = "\(root)"
             */
+            activeNumber = "\(root)"
+            
             
             firstNumber = Double(activeNumber)!
             firstNumber = sqrt(firstNumber)
             activeNumber = "\(firstNumber)"
+            
         }
         
          
