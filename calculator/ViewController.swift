@@ -14,8 +14,11 @@ class ViewController: UIViewController {
     var secondNumber: Double = 0
     var result: Double = 0
     var resultInt: Int = 0
-    var activeNumber:String = ""
+    var activeNumber:String = "0"
     var operationSelected: Int = 0
+    var root: Double = 0
+    let PI = 3.1415926535
+    
     
     // Outlets
     @IBOutlet weak var resultLabel: UILabel!
@@ -65,12 +68,76 @@ class ViewController: UIViewController {
             activeNumber = "\(firstNumber)"
             
         }
+        if sender.tag == 10 && activeNumber != ""
+        {
+            firstNumber = Double(activeNumber)!
+            firstNumber = firstNumber * firstNumber
+            activeNumber = "\(firstNumber)"
+            
+        }
+        
+        if sender.tag == 11
+        {
+            activeNumber = "\(PI)"
+
+        }
+        
+        if sender.tag == 12 && activeNumber != ""
+        {
+            firstNumber = Double(activeNumber)!
+            firstNumber = tan(((PI * firstNumber)/180))
+            activeNumber = "\(firstNumber)"
+
+        }
+        if sender.tag == 13 && activeNumber != ""
+        {
+            firstNumber = Double(activeNumber)!
+            firstNumber = cos(((PI * firstNumber)/180))
+            activeNumber = "\(firstNumber)"
+
+        }
+        if sender.tag == 14 && activeNumber != ""
+        {
+            firstNumber = Double(activeNumber)!
+            firstNumber = sin(((PI * firstNumber)/180))
+            activeNumber = "\(firstNumber)"
+
+        }
+        //https://learnappmaking.com/random-numbers-swift/
+        
+        if sender.tag == 15 && activeNumber != ""
+        {
+            firstNumber = Double.random(in: 0..<1)
+            activeNumber = "\(firstNumber)"
+
+        }
+        
+        
+        if sender.tag == 16
+        {
+            /*
+            root = Double(activeNumber)! / 2
+            while (root != 0)
+            {
+                result = root
+                root = ((Double(activeNumber)! / result) + result )/2
+            }
+            
+            activeNumber = "\(root)"
+            */
+            
+            firstNumber = Double(activeNumber)!
+            firstNumber = sqrt(firstNumber)
+            activeNumber = "\(firstNumber)"
+        }
+        
+         
         //assigns the final active number to the operator and result label. It was weird to have the number frozen on the result label.
+        
         operationLable.text = activeNumber
         operationalLabel_Landscape.text = activeNumber
         resultLabel.text = activeNumber
-        resultLabel_Landscape.text = resultLabel.text
-    }
+        resultLabel_Landscape.text = resultLabel.text}
     
     @IBAction func OnNumberButton_Pressed(_ sender: UIButton)
     {
@@ -96,6 +163,8 @@ class ViewController: UIViewController {
                 operationLable.text?.append(button_text!)
                 operationalLabel_Landscape.text?.append(button_text!)
             }
+            
+
             
         default:
             if activeNumber.count < 10

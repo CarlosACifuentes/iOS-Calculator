@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator_part2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-dJ-8dU">
@@ -358,7 +358,7 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T56-GN-sqh"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kud-8d-ByY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXH-H8-1LY">
@@ -532,7 +532,7 @@
                                     <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ivj-Cf-nfx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LUC-bg-J1Q">
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LUC-bg-J1Q">
                                 <rect key="frame" x="225.00000000000003" y="122.66666666666669" width="65.333333333333343" height="65.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LUC-bg-J1Q" secondAttribute="height" multiplier="1:1" id="GgU-05-dLP"/>
@@ -543,7 +543,7 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emi-J3-kJf"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpI-7d-3ZP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNt-Tg-ggt">
@@ -594,7 +594,7 @@
                                     <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJc-VZ-o9t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-Ip-ECX">
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-Ip-ECX">
                                 <rect key="frame" x="142.33333333333334" y="208" width="65.666666666666657" height="65.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nug-Ip-ECX" secondAttribute="height" multiplier="1:1" id="Zhb-vA-fLB"/>
@@ -607,10 +607,10 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yv-kf-JBB"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0my-6c-7vH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-DU-RG5">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-DU-RG5">
                                 <rect key="frame" x="225.00000000000003" y="293.66666666666669" width="65.333333333333343" height="65.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DMi-DU-RG5" secondAttribute="height" multiplier="1:1" id="L6L-LC-lBH"/>
@@ -621,10 +621,10 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zE-SL-YdY"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7TZ-3m-kD3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s6t-DO-pVQ">
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s6t-DO-pVQ">
                                 <rect key="frame" x="142.33333333333334" y="293.66666666666669" width="65.666666666666657" height="65.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="s6t-DO-pVQ" secondAttribute="height" multiplier="1:1" id="wnq-uP-RY6"/>
@@ -635,7 +635,7 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Sm-xf-OJD"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAc-2H-Kix"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-b1-HvC">
@@ -653,7 +653,7 @@
                                     <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXm-FH-tve"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4m-us-omv">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4m-us-omv">
                                 <rect key="frame" x="307.33333333333331" y="208" width="65.333333333333314" height="65.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q4m-us-omv" secondAttribute="height" multiplier="1:1" id="R6H-Eh-1mP"/>
@@ -665,10 +665,10 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96z-sm-UxF"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="823-V4-haR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-5f-PAY">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-5f-PAY">
                                 <rect key="frame" x="307.33333333333331" y="122.66666666666669" width="65.333333333333314" height="65.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Apk-5f-PAY" secondAttribute="height" multiplier="1:1" id="W9c-Id-qPk"/>
@@ -679,7 +679,7 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0N5-YQ-9OL"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46G-ni-R8X"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB9-6B-ZFi">
@@ -706,7 +706,7 @@
                                     <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfI-a2-bir"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-Yg-qLM">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-Yg-qLM">
                                 <rect key="frame" x="225.00000000000003" y="208" width="65.333333333333343" height="65.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rEw-Yg-qLM" secondAttribute="height" multiplier="1:1" id="PFi-He-HbM"/>
@@ -717,7 +717,7 @@
                                     <color key="baseBackgroundColor" red="0.1647058874" green="0.21960783" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OnNumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Cf-FB-PRD"/>
+                                    <action selector="OnSpecialButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8t-18-Al5"/>
                                 </connections>
                             </button>
                         </subviews>
