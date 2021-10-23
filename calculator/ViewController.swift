@@ -126,10 +126,9 @@ class ViewController: UIViewController {
             {
                 root = ((firstNumber / root) + root )/2
             }
-            */
+            
             activeNumber = "\(root)"
-            
-            
+             */
             firstNumber = Double(activeNumber)!
             firstNumber = sqrt(firstNumber)
             activeNumber = "\(firstNumber)"
